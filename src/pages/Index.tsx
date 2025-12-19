@@ -7,6 +7,7 @@ import malmoHero from "@/assets/malmo/malmo-hero.jpg";
 import malmo02 from "@/assets/malmo/malmo-02.avif";
 import malmo05 from "@/assets/malmo/malmo-05.avif";
 import malmo09 from "@/assets/malmo/malmo-09.avif";
+import headshot from "@/assets/PuhlOwenHeadshotWebsite.jpeg";
 
 const Index = () => {
   const sectionsRef = useRef<(HTMLElement | null)[]>([]);
@@ -50,13 +51,14 @@ const Index = () => {
         className="flow-section px-6 md:px-12 lg:px-24 py-16 md:py-24"
       >
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          {/* Headshot placeholder */}
+          {/* Headshot */}
           <div className="lg:col-span-4">
             <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
-              {/* Replace with your headshot */}
-              <div className="w-full h-full flex items-center justify-center text-muted-foreground text-sm">
-                Your headshot here
-              </div>
+              <img
+                src={headshot}
+                alt="Owen Puhl headshot"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center">
