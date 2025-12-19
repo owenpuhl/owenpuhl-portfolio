@@ -67,7 +67,7 @@ const Index = () => {
         </p>
         <div className="flex flex-wrap gap-6 mt-4 text-sm text-muted-foreground">
           <a 
-            href="mailto:op2238@columbia.edu" 
+            href="mailto:ogp2110@columbia.edu" 
             className="hover:text-foreground transition-colors link-underline"
           >
             Email
