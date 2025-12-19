@@ -35,14 +35,38 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero - Simple name and title */}
-      <section className="h-[70vh] min-h-[500px] flex flex-col justify-end px-6 md:px-12 lg:px-24 pb-12">
+      {/* Hero - Name, title, and contact */}
+      <section className="px-6 md:px-12 lg:px-24 pt-12 pb-16">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-none">
           Owen Puhl
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-md">
           CS, Math, & Music at Columbia. Photographer. Producer.
         </p>
+        <div className="flex flex-wrap gap-6 mt-6 text-sm text-muted-foreground">
+          <a 
+            href="mailto:op2238@columbia.edu" 
+            className="hover:text-foreground transition-colors link-underline"
+          >
+            Email
+          </a>
+          <a 
+            href="https://github.com/owenpuhl" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors link-underline"
+          >
+            GitHub
+          </a>
+          <a 
+            href="https://linkedin.com/in/owenpuhl" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors link-underline"
+          >
+            LinkedIn
+          </a>
+        </div>
       </section>
 
       {/* Headshot + Brief Intro */}
@@ -119,12 +143,12 @@ const Index = () => {
               From hackathon prototypes to research implementations — 
               code as composition, some with a soundtrack.
             </p>
-            <Link 
-              to="/work" 
-              className="link-underline font-serif text-foreground w-fit"
-            >
-              View work
-            </Link>
+              <Link 
+                to="/about" 
+                className="link-underline font-serif text-foreground w-fit"
+              >
+                Learn more
+              </Link>
           </div>
           <div className="relative aspect-square lg:aspect-auto lg:h-[80vh] order-1 lg:order-2">
             <img
@@ -169,9 +193,7 @@ const Index = () => {
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <Link to="/lens" className="hover:text-foreground transition-colors">Lens</Link>
-              <Link to="/work" className="hover:text-foreground transition-colors">Work</Link>
               <Link to="/about" className="hover:text-foreground transition-colors">About</Link>
-              <Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link>
             </div>
           </div>
         </div>

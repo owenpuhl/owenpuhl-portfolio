@@ -89,18 +89,6 @@ const About = () => {
           >
             See how I see →
           </Link>
-          <Link 
-            to="/work" 
-            className="link-underline font-display text-xl text-foreground hover:text-accent transition-colors"
-          >
-            View my work →
-          </Link>
-          <Link 
-            to="/contact" 
-            className="link-underline font-display text-xl text-foreground hover:text-accent transition-colors"
-          >
-            Get in touch →
-          </Link>
         </div>
       </section>
 
