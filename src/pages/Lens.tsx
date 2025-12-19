@@ -1,33 +1,33 @@
 import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 
-// Using existing Malmö images for the gallery
-import malmo01 from "@/assets/malmo/malmo-01.jpg";
-import malmo02 from "@/assets/malmo/malmo-02.avif";
-import malmo03 from "@/assets/malmo/malmo-03.avif";
-import malmo04 from "@/assets/malmo/malmo-04.avif";
-import malmo05 from "@/assets/malmo/malmo-05.avif";
-import malmo06 from "@/assets/malmo/malmo-06.avif";
-import malmo07 from "@/assets/malmo/malmo-07.avif";
-import malmo08 from "@/assets/malmo/malmo-08.avif";
-import malmo09 from "@/assets/malmo/malmo-09.avif";
-import malmo10 from "@/assets/malmo/malmo-10.avif";
-import malmo11 from "@/assets/malmo/malmo-11.avif";
-import malmo12 from "@/assets/malmo/malmo-12.avif";
+// Portfolio film photography
+import film01 from "@/assets/portfoliofilm1/88840005.JPG";
+import film02 from "@/assets/portfoliofilm1/88840009.JPG";
+import film03 from "@/assets/portfoliofilm1/88840010.JPG";
+import film04 from "@/assets/portfoliofilm1/88840011.JPG";
+import film05 from "@/assets/portfoliofilm1/88840012.JPG";
+import film06 from "@/assets/portfoliofilm1/88840013.JPG";
+import film07 from "@/assets/portfoliofilm1/88840014.JPG";
+import film08 from "@/assets/portfoliofilm1/88840015.JPG";
+import film09 from "@/assets/portfoliofilm1/88840016.JPG";
+import film10 from "@/assets/portfoliofilm1/88840017.JPG";
+import film11 from "@/assets/portfoliofilm1/88840018.JPG";
+import film12 from "@/assets/portfoliofilm1/88840019.JPG";
 
 const galleryImages = [
-  { src: malmo01, alt: "Urban geometry", span: "col-span-8 row-span-2" },
-  { src: malmo02, alt: "Light study", span: "col-span-4 row-span-1" },
-  { src: malmo03, alt: "Street moment", span: "col-span-4 row-span-1" },
-  { src: malmo04, alt: "Architecture", span: "col-span-4 row-span-2" },
-  { src: malmo05, alt: "Texture", span: "col-span-4 row-span-1" },
-  { src: malmo06, alt: "Reflection", span: "col-span-6 row-span-1" },
-  { src: malmo07, alt: "Composition", span: "col-span-6 row-span-2" },
-  { src: malmo08, alt: "Shadow play", span: "col-span-6 row-span-1" },
-  { src: malmo09, alt: "Quiet moment", span: "col-span-4 row-span-1" },
-  { src: malmo10, alt: "Pattern", span: "col-span-4 row-span-1" },
-  { src: malmo11, alt: "Perspective", span: "col-span-8 row-span-1" },
-  { src: malmo12, alt: "Detail", span: "col-span-4 row-span-1" },
+  { src: film01, alt: "Portfolio moment", span: "col-span-8 row-span-2" },
+  { src: film02, alt: "Film study", span: "col-span-4 row-span-1" },
+  { src: film03, alt: "Captured light", span: "col-span-4 row-span-1" },
+  { src: film04, alt: "Composition", span: "col-span-4 row-span-2" },
+  { src: film05, alt: "Detail", span: "col-span-4 row-span-1" },
+  { src: film06, alt: "Moment", span: "col-span-6 row-span-1" },
+  { src: film07, alt: "Perspective", span: "col-span-6 row-span-2" },
+  { src: film08, alt: "Frame", span: "col-span-6 row-span-1" },
+  { src: film09, alt: "Expression", span: "col-span-4 row-span-1" },
+  { src: film10, alt: "Scene", span: "col-span-4 row-span-1" },
+  { src: film11, alt: "Atmosphere", span: "col-span-8 row-span-1" },
+  { src: film12, alt: "Story", span: "col-span-4 row-span-1" },
 ];
 
 const Lens = () => {
@@ -95,7 +95,7 @@ const Lens = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-12 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Owen Puhl. All rights reserved.
+            © 2025 Owen Puhl. All rights reserved.
           </p>
         </div>
       </footer>

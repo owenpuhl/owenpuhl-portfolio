@@ -135,28 +135,28 @@ const Contact = () => {
             <div className="space-y-4 text-muted-foreground">
               <p>
                 <span className="text-foreground">Email: </span>
-                <a 
-                  href="mailto:owen@columbia.edu" 
+                <a
+                  href="mailto:ogp2110@columbia.edu"
                   className="link-underline hover:text-foreground transition-colors"
                 >
-                  owen@columbia.edu
+                  ogp2110@columbia.edu
                 </a>
               </p>
               <p>
                 <span className="text-foreground">LinkedIn: </span>
-                <a 
-                  href="https://linkedin.com" 
+                <a
+                  href="https://www.linkedin.com/in/owenpuhl/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-underline hover:text-foreground transition-colors"
                 >
-                  /in/owenpuhl
+                  Owen Puhl
                 </a>
               </p>
               <p>
                 <span className="text-foreground">GitHub: </span>
-                <a 
-                  href="https://github.com" 
+                <a
+                  href="https://github.com/owenpuhl"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-underline hover:text-foreground transition-colors"
@@ -173,7 +173,7 @@ const Contact = () => {
       <footer className="border-t border-border mt-auto">
         <div className="px-6 md:px-12 lg:px-24 py-12 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Owen Puhl. All rights reserved.
+            © 2025 Owen Puhl. All rights reserved.
           </p>
         </div>
       </footer>

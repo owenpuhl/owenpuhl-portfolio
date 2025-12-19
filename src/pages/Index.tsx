@@ -41,7 +41,7 @@ const Index = () => {
           Owen Puhl
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-md">
-          CS-Math at Columbia. Photographer. Producer.
+          CS, Math, & Music at Columbia. Photographer. Producer.
         </p>
       </section>
 
@@ -63,8 +63,7 @@ const Index = () => {
           </div>
           <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center">
             <p className="font-serif text-xl md:text-2xl text-foreground leading-relaxed">
-              I sit at the intersection of logic and aesthetics — building software 
-              with the same attention to composition I bring to photography and sound.
+              Motivated by logic + aesthetics. Always building.
             </p>
           </div>
         </div>
@@ -91,8 +90,7 @@ const Index = () => {
               How I see
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Every frame is a decision — the same principles that make a compelling 
-              photograph make elegant code.
+              Detail oriented.
             </p>
             <Link 
               to="/lens" 
@@ -151,8 +149,7 @@ const Index = () => {
             The intersection
           </h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            CS-Math isn't just a major — it's a lens for understanding pattern and structure 
-            across domains: algorithms, signal processing, harmonic theory, visual composition.
+            I thrive on pattern and structure: algorithms, harmonies, visual composition.
           </p>
           <Link 
             to="/about" 
@@ -168,7 +165,7 @@ const Index = () => {
         <div className="px-6 md:px-12 lg:px-24 py-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 Owen Puhl
+              © 2025 Owen Puhl
             </p>
             <div className="flex gap-6 text-sm text-muted-foreground">
               <Link to="/lens" className="hover:text-foreground transition-colors">Lens</Link>
