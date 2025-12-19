@@ -1,0 +1,18 @@
+{
+  "name": "owenpuhl-portfolio",
+  "main": "src/index.ts",
+  "site": {
+    "bucket": "./dist"
+  },
+  "build": {
+    "command": "npm run build",
+    "cwd": "."
+  },
+  "env": {
+    "production": {
+      "name": "owenpuhl-portfolio"
+    }
+  },
+  "compatibility_date": "2025-12-19",
+  "compatibility_flags": []
+}
