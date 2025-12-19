@@ -108,7 +108,7 @@ const About = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-12 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Owen Puhl. All rights reserved.
+            © 2025 Owen Puhl. All rights reserved.
           </p>
         </div>
       </footer>
