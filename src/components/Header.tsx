@@ -9,9 +9,7 @@ import {
 
 const navLinks = [
   { label: "Lens", path: "/lens" },
-  { label: "Work", path: "/work" },
   { label: "About", path: "/about" },
-  { label: "Contact", path: "/contact" },
 ];
 
 const Header = () => {
