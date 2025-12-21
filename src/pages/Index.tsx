@@ -105,16 +105,16 @@ const Index = () => {
           </div>
           <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8">
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              Based in Ohio and New York. Motivated by logic, pattern, & aesthetics.
+              Based in Ohio and New York. Motivated by logic, pattern, and aesthetics.
             </p>
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              My background is in technology consulting, behavioral research, & fintech projects.
+              My background is in technology, consulting, and behavioral research.
             </p>
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              I'm currently learning to shoot film photography & live code music.
+              I'm currently learning to shoot film photography and live code music.
             </p>
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              Always building & looking for new projects + challenges!
+              Always building and looking for new projects + challenges!
             </p>
           </div>
         </div>
