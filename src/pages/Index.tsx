@@ -66,12 +66,9 @@ const Index = () => {
           CS, Math, & Music at Columbia University. Photographer. Music producer.
         </p>
         <div className="flex flex-wrap gap-6 mt-4 text-sm text-muted-foreground">
-          <a 
-            href="mailto:ogp2110@columbia.edu" 
-            className="hover:text-foreground transition-colors link-underline"
-          >
-            Email
-          </a>
+          <span className="text-muted-foreground">
+            ogp2110@columbia.edu
+          </span>
           <a 
             href="https://github.com/owenpuhl" 
             target="_blank" 
