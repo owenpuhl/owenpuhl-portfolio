@@ -63,7 +63,7 @@ const Index = () => {
           Owen Puhl
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-md">
-          CS, Math, & Music at Columbia University. Photographer. Music producer.
+          Applied Mathematics at Columbia University
         </p>
         <div className="flex flex-wrap gap-6 mt-4 text-sm text-muted-foreground">
           <span className="text-muted-foreground">
@@ -105,7 +105,7 @@ const Index = () => {
               Based in Ohio and New York. Motivated by logic, pattern, and aesthetics.
             </p>
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              My background is in technology, consulting, and behavioral research.
+              My background is in business, technology, and behavioral research.
             </p>
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
               I'm currently learning to shoot film photography and live code music.
