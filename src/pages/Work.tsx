@@ -6,18 +6,7 @@ const workItems = [
     role: "Market Mapping & Executive Search",
     description: "Conducted market mapping and executive search engagements for technology startups across New York City.",
     tags: ["Strategy", "Recruiting", "Tech"],
-  },
-  {
-    company: "Columbia Queer Business Society",
-    role: "Web Design",
-    description: "Designed and developed the organization's web presence, creating an accessible and modern digital platform.",
-    tags: ["Web Design", "Branding"],
-  },
-  {
-    company: "RP Global Consulting",
-    role: "Website Design",
-    description: "Led website design initiatives, translating business requirements into compelling digital experiences.",
-    tags: ["Design", "Consulting"],
+    image: "/BleeckerVC.jpg",
   },
 ];
 
@@ -58,7 +47,7 @@ const Work = () => {
                 </p>
                 <div className="flex flex-wrap gap-2 mt-6">
                   {item.tags.map((tag) => (
-                    <span 
+                    <span
                       key={tag}
                       className="px-3 py-1 text-xs font-serif text-muted-foreground border border-border"
                     >
@@ -66,6 +55,15 @@ const Work = () => {
                     </span>
                   ))}
                 </div>
+                {item.image && (
+                  <div className="bg-muted/30 border border-border overflow-hidden mt-6">
+                    <img
+                      src={item.image}
+                      alt={item.company}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                )}
               </div>
             </article>
           ))}
