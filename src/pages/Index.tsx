@@ -1,35 +1,24 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 // Headshot
 import headshot from "@/assets/PuhlOwenHeadshotWebsite.jpeg";
 
-// Gallery images
-import film01 from "@/assets/portfoliofilm1/88840005.JPG";
-import film02 from "@/assets/portfoliofilm1/88840009.JPG";
-import film03 from "@/assets/portfoliofilm1/88840010.JPG";
-import film04 from "@/assets/portfoliofilm1/88840011.JPG";
-import film05 from "@/assets/portfoliofilm1/88840012.JPG";
-import film06 from "@/assets/portfoliofilm1/88840013.JPG";
-import film07 from "@/assets/portfoliofilm1/88840014.JPG";
-import film08 from "@/assets/portfoliofilm1/88840015.JPG";
-import film09 from "@/assets/portfoliofilm1/88840016.JPG";
-import film10 from "@/assets/portfoliofilm1/88840017.JPG";
-import film11 from "@/assets/portfoliofilm1/88840018.JPG";
-import film12 from "@/assets/portfoliofilm1/88840019.JPG";
-
+// Gallery images - using public path
 const galleryImages = [
-  { src: film01, alt: "Portfolio moment", span: "col-span-8 row-span-2" },
-  { src: film02, alt: "Film study", span: "col-span-4 row-span-1" },
-  { src: film03, alt: "Captured light", span: "col-span-4 row-span-1" },
-  { src: film04, alt: "Composition", span: "col-span-4 row-span-2" },
-  { src: film05, alt: "Detail", span: "col-span-4 row-span-1" },
-  { src: film06, alt: "Moment", span: "col-span-6 row-span-1" },
-  { src: film07, alt: "Perspective", span: "col-span-6 row-span-2" },
-  { src: film08, alt: "Frame", span: "col-span-6 row-span-1" },
-  { src: film09, alt: "Expression", span: "col-span-4 row-span-1" },
-  { src: film10, alt: "Scene", span: "col-span-4 row-span-1" },
-  { src: film11, alt: "Atmosphere", span: "col-span-8 row-span-1" },
-  { src: film12, alt: "Story", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840005.JPG", alt: "Portfolio moment", span: "col-span-8 row-span-2" },
+  { src: "/PortfolioFilm1/88840009.JPG", alt: "Film study", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840010.JPG", alt: "Captured light", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840011.JPG", alt: "Composition", span: "col-span-4 row-span-2" },
+  { src: "/PortfolioFilm1/88840012.JPG", alt: "Detail", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840013.JPG", alt: "Moment", span: "col-span-6 row-span-1" },
+  { src: "/PortfolioFilm1/88840014.JPG", alt: "Perspective", span: "col-span-6 row-span-2" },
+  { src: "/PortfolioFilm1/88840015.JPG", alt: "Frame", span: "col-span-6 row-span-1" },
+  { src: "/PortfolioFilm1/88840016.JPG", alt: "Expression", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840017.JPG", alt: "Scene", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840018.JPG", alt: "Atmosphere", span: "col-span-8 row-span-1" },
+  { src: "/PortfolioFilm1/88840019.JPG", alt: "Story", span: "col-span-4 row-span-1" },
 ];
 
 const Index = () => {
@@ -57,8 +46,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero - Name, title, and contact */}
-      <section className="px-6 md:px-12 lg:px-24 pt-12 pb-8">
+      <section className="px-6 md:px-12 lg:px-24 pt-20 md:pt-28 pb-8">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-none">
           Owen Puhl
         </h1>
