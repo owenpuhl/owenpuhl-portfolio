@@ -39,9 +39,12 @@ const Research = () => {
               </a>
             </div>
             <div className="lg:col-span-6 lg:col-start-7">
-              {/* Placeholder for Cambridge editorial imagery */}
-              <div className="aspect-[4/3] bg-muted/30 border border-border flex items-center justify-center">
-                <span className="text-muted-foreground font-serif text-sm">Cambridge imagery</span>
+              <div className="aspect-[4/3] bg-muted/30 border border-border overflow-hidden">
+                <img
+                  src="/CambridgeLandscape.jpg"
+                  alt="Cambridge landscape"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -111,13 +114,14 @@ const Research = () => {
                 <p className="font-serif text-base md:text-lg text-foreground leading-relaxed">
                   Research examining political accountability mechanisms through data-driven analysis and visualization.
                 </p>
-                {/* Placeholder for visualizations */}
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="aspect-square bg-muted/30 border border-border flex items-center justify-center">
-                    <span className="text-muted-foreground font-serif text-xs">Visualization 1</span>
-                  </div>
-                  <div className="aspect-square bg-muted/30 border border-border flex items-center justify-center">
-                    <span className="text-muted-foreground font-serif text-xs">Visualization 2</span>
+                {/* Education by State visualization */}
+                <div className="mt-6">
+                  <div className="bg-muted/30 border border-border overflow-hidden">
+                    <img
+                      src="/education_by_state.png"
+                      alt="Education by state visualization"
+                      className="w-full h-auto"
+                    />
                   </div>
                 </div>
               </div>

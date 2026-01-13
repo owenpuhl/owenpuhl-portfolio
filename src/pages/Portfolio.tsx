@@ -130,6 +130,13 @@ const Portfolio = () => {
                 <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
                   Experimenting with live coding music.
                 </p>
+                <div className="aspect-[4/3] bg-muted/30 border border-border overflow-hidden mt-4">
+                  <img
+                    src="/StrudelREPL.jpg"
+                    alt="Strudel REPL"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -149,11 +156,11 @@ const Portfolio = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-baseline border-b border-border pb-2">
                   <span className="font-serif text-foreground">Instagram</span>
-                  <span className="font-serif text-muted-foreground">50,000+ impressions/month</span>
+                  <span className="font-serif text-muted-foreground">50,000 impressions/month</span>
                 </div>
                 <div className="flex justify-between items-baseline border-b border-border pb-2">
                   <span className="font-serif text-foreground">TikTok</span>
-                  <span className="font-serif text-muted-foreground">500,000+ impressions</span>
+                  <span className="font-serif text-muted-foreground">500,000+ total impressions</span>
                 </div>
               </div>
             </div>
@@ -171,6 +178,22 @@ const Portfolio = () => {
             <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed">
               My start in Informative Speaking taught me attention to detail with boards — an acknowledgement of art, composition, and product.
             </p>
+            <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8">
+              <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
+                <img
+                  src="/PuhlPoster.jpg"
+                  alt="Puhl poster"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
+                <img
+                  src="/PuhlSpeech.jpeg"
+                  alt="Puhl speech"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

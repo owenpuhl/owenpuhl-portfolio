@@ -27,13 +27,20 @@ const Leadership = () => {
                   Ascend Consulting Group
                 </h2>
                 <p className="font-serif text-muted-foreground mt-2">
-                  Role details here
+                  Director of Professional Development
                 </p>
               </div>
               <div className="lg:col-span-6 lg:col-start-6">
                 <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed">
                   Description of your work with Ascend Consulting Group. What you built, led, and accomplished.
                 </p>
+                <div className="bg-muted/30 border border-border overflow-hidden mt-6">
+                  <img
+                    src="/AscendGroupPhoto.jpg"
+                    alt="Ascend group photo"
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
             </div>
           </article>
@@ -45,12 +52,22 @@ const Leadership = () => {
                 <h2 className="font-display text-2xl md:text-3xl text-foreground">
                   Columbia Queer Business Society
                 </h2>
+                <p className="font-serif text-muted-foreground mt-2">
+                  Technology Chair
+                </p>
               </div>
               <div className="lg:col-span-6 lg:col-start-6 space-y-8">
                 {/* Spring 2025 */}
                 <div>
                   <h3 className="font-display text-lg text-foreground">Spring 2025</h3>
-                  <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
+                  <div className="bg-muted/30 border border-border overflow-hidden mt-4">
+                    <img
+                      src="/CQBSSpring25.jpg"
+                      alt="CQBS Spring 2025"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
                     Details about your Spring 2025 role and initiatives.
                   </p>
                 </div>
@@ -58,7 +75,14 @@ const Leadership = () => {
                 {/* Fall 2025 */}
                 <div>
                   <h3 className="font-display text-lg text-foreground">Fall 2025</h3>
-                  <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
+                  <div className="bg-muted/30 border border-border overflow-hidden mt-4">
+                    <img
+                      src="/CQBSFall25.jpg"
+                      alt="CQBS Fall 2025"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
                     Details about your Fall 2025 role and initiatives.
                   </p>
                 </div>
