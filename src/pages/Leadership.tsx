@@ -46,7 +46,7 @@ const Leadership = () => {
                 </p>
                 <div className="bg-muted/30 border border-border overflow-hidden mt-6">
                   <img
-                    src="/AscendGroupPhoto.jpg"
+                    src="/images/AscendGroupPhoto.jpg"
                     alt="Ascend group photo"
                     className="w-full h-auto"
                   />
@@ -81,7 +81,7 @@ const Leadership = () => {
                   <h3 className="font-display text-lg text-foreground">Spring 2025 Events:</h3>
                   <div className="bg-muted/30 border border-border overflow-hidden mt-4">
                     <img
-                      src="/CQBSSpring25.jpg"
+                      src="/images/CQBSSpring25.jpg"
                       alt="CQBS Spring 2025"
                       className="w-full h-auto"
                     />
@@ -96,7 +96,7 @@ const Leadership = () => {
                   <h3 className="font-display text-lg text-foreground">Fall 2025 Events:</h3>
                   <div className="bg-muted/30 border border-border overflow-hidden mt-4">
                     <img
-                      src="/CQBSFall25.jpg"
+                      src="/images/CQBSFall25.jpg"
                       alt="CQBS Fall 2025"
                       className="w-full h-auto"
                     />

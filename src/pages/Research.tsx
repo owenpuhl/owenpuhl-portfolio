@@ -44,7 +44,7 @@ const Research = () => {
             <div className="lg:col-span-6 lg:col-start-7">
               <div className="aspect-[4/3] bg-muted/30 border border-border overflow-hidden">
                 <img
-                  src="/CambridgeLandscape.jpg"
+                  src="/images/CambridgeLandscape.jpg"
                   alt="Cambridge landscape"
                   className="w-full h-full object-cover"
                 />
@@ -52,14 +52,14 @@ const Research = () => {
               <div className="grid grid-cols-2 gap-4 mt-4">
                 <div className="overflow-hidden">
                   <img
-                    src="/CambridgeGraphicClimateMediation.jpg"
+                    src="/images/CambridgeGraphicClimateMediation.jpg"
                     alt="Cambridge Graphic Climate Mediation"
                     className="w-full h-auto"
                   />
                 </div>
                 <div className="overflow-hidden">
                   <img
-                    src="/PuhlCambridgeGala.jpg"
+                    src="/images/PuhlCambridgeGala.jpg"
                     alt="Puhl Cambridge Gala"
                     className="w-full h-auto"
                   />
@@ -131,7 +131,7 @@ const Research = () => {
                 <div className="mt-6">
                   <div className="bg-muted/30 border border-border overflow-hidden">
                     <img
-                      src="/education_by_state.png"
+                      src="/images/education_by_state.png"
                       alt="Education by state visualization"
                       className="w-full h-auto"
                     />
