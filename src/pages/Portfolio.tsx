@@ -84,30 +84,32 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* SDT Rush Photography */}
-      <section className="px-6 md:px-12 lg:px-24 pb-16">
-        <div className="border-t border-border pt-8">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-12">
-            <div className="lg:col-span-4">
-              <h2 className="font-display text-2xl md:text-3xl text-foreground">
-                Rush Photography
-              </h2>
-              <p className="font-serif text-muted-foreground mt-2">
-                SDT
-              </p>
-            </div>
-            <div className="lg:col-span-6 lg:col-start-6">
-              <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed">
-                Documenting rush events and community moments through photography.
-              </p>
-              {/* Placeholder for SDT photography */}
-              <div className="aspect-[3/2] bg-muted/30 border border-border flex items-center justify-center mt-6">
-                <span className="text-muted-foreground font-serif text-sm">SDT photography samples</span>
+      {/* SDT Rush Photography - Commented out for later */}
+      {false && (
+        <section className="px-6 md:px-12 lg:px-24 pb-16">
+          <div className="border-t border-border pt-8">
+            <div className="grid lg:grid-cols-12 gap-6 lg:gap-12">
+              <div className="lg:col-span-4">
+                <h2 className="font-display text-2xl md:text-3xl text-foreground">
+                  Rush Photography
+                </h2>
+                <p className="font-serif text-muted-foreground mt-2">
+                  SDT
+                </p>
+              </div>
+              <div className="lg:col-span-6 lg:col-start-6">
+                <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed">
+                  Documenting rush events and community moments through photography.
+                </p>
+                {/* Placeholder for SDT photography */}
+                <div className="aspect-[3/2] bg-muted/30 border border-border flex items-center justify-center mt-6">
+                  <span className="text-muted-foreground font-serif text-sm">SDT photography samples</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Music Production */}
       <section className="px-6 md:px-12 lg:px-24 pb-16">
@@ -122,13 +124,29 @@ const Portfolio = () => {
               <div>
                 <h3 className="font-display text-lg text-foreground">WKCR</h3>
                 <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
-                  Programming music on Columbia's radio station.
+                  Programming music on Columbia's radio station. Catch me on Transfigured Night, every other Friday from 2-6 AM!
                 </p>
+                <div className="grid grid-cols-2 gap-4 mt-4">
+                  <div className="bg-muted/30 border border-border overflow-hidden">
+                    <img
+                      src="/WKCR1.jpg"
+                      alt="WKCR 1"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="bg-muted/30 border border-border overflow-hidden">
+                    <img
+                      src="/WKCR2.JPG"
+                      alt="WKCR 2"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
               </div>
               <div>
                 <h3 className="font-display text-lg text-foreground">Strudel</h3>
                 <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
-                  Experimenting with live coding music.
+                  Experimenting with live coding music. Snippet of one of my favorites so far.
                 </p>
                 <div className="aspect-[4/3] bg-muted/30 border border-border overflow-hidden mt-4">
                   <img
@@ -176,7 +194,7 @@ const Portfolio = () => {
               Origins
             </h2>
             <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed">
-              My start in Informative Speaking taught me attention to detail with boards — an acknowledgement of art, composition, and product.
+              I got my start competing in Informative Speaking during high school. I learned to curate mixed media using poster boards. My speeches grew over the course of the year, until I finally presented at state and national competitions. Supplimenting my writing with visuals allowed me to bring light to causes I felt strongly about in healthcare and technology.
             </p>
             <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8">
               <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
