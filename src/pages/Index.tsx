@@ -1,39 +1,52 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 // Headshot
 import headshot from "@/assets/PuhlOwenHeadshotWebsite.jpeg";
 
-// Gallery images
-import film01 from "@/assets/portfoliofilm1/88840005.JPG";
-import film02 from "@/assets/portfoliofilm1/88840009.JPG";
-import film03 from "@/assets/portfoliofilm1/88840010.JPG";
-import film04 from "@/assets/portfoliofilm1/88840011.JPG";
-import film05 from "@/assets/portfoliofilm1/88840012.JPG";
-import film06 from "@/assets/portfoliofilm1/88840013.JPG";
-import film07 from "@/assets/portfoliofilm1/88840014.JPG";
-import film08 from "@/assets/portfoliofilm1/88840015.JPG";
-import film09 from "@/assets/portfoliofilm1/88840016.JPG";
-import film10 from "@/assets/portfoliofilm1/88840017.JPG";
-import film11 from "@/assets/portfoliofilm1/88840018.JPG";
-import film12 from "@/assets/portfoliofilm1/88840019.JPG";
-
+// Gallery images - using public path
 const galleryImages = [
-  { src: film01, alt: "Portfolio moment", span: "col-span-8 row-span-2" },
-  { src: film02, alt: "Film study", span: "col-span-4 row-span-1" },
-  { src: film03, alt: "Captured light", span: "col-span-4 row-span-1" },
-  { src: film04, alt: "Composition", span: "col-span-4 row-span-2" },
-  { src: film05, alt: "Detail", span: "col-span-4 row-span-1" },
-  { src: film06, alt: "Moment", span: "col-span-6 row-span-1" },
-  { src: film07, alt: "Perspective", span: "col-span-6 row-span-2" },
-  { src: film08, alt: "Frame", span: "col-span-6 row-span-1" },
-  { src: film09, alt: "Expression", span: "col-span-4 row-span-1" },
-  { src: film10, alt: "Scene", span: "col-span-4 row-span-1" },
-  { src: film11, alt: "Atmosphere", span: "col-span-8 row-span-1" },
-  { src: film12, alt: "Story", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840005.JPG", alt: "Portfolio moment", span: "col-span-8 row-span-2" },
+  { src: "/PortfolioFilm1/88840009.JPG", alt: "Film study", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840010.JPG", alt: "Captured light", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840011.JPG", alt: "Composition", span: "col-span-4 row-span-2" },
+  { src: "/PortfolioFilm1/88840012.JPG", alt: "Detail", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840013.JPG", alt: "Moment", span: "col-span-6 row-span-1" },
+  { src: "/PortfolioFilm1/88840014.JPG", alt: "Perspective", span: "col-span-6 row-span-2" },
+  { src: "/PortfolioFilm1/88840015.JPG", alt: "Frame", span: "col-span-6 row-span-1" },
+  { src: "/PortfolioFilm1/88840016.JPG", alt: "Expression", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840017.JPG", alt: "Scene", span: "col-span-4 row-span-1" },
+  { src: "/PortfolioFilm1/88840018.JPG", alt: "Atmosphere", span: "col-span-8 row-span-1" },
+  { src: "/PortfolioFilm1/88840019.JPG", alt: "Story", span: "col-span-4 row-span-1" },
 ];
+
+const paragraphs = [
+  "Based in Ohio and New York. Motivated by logic, strategy, and pattern.",
+  "My background is in business, technology, and behavioral research.",,
+  "Living portfolio. Always building & looking for new projects and challenges!",
+];
+
+const BlurText = ({ children }: { children: string }) => {
+  return (
+    <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+      {children}
+    </p>
+  );
+};
 
 const Index = () => {
   const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [scrollY, setScrollY] = useState(0);
+  const textSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -57,29 +70,31 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+
       {/* Hero - Name, title, and contact */}
-      <section className="px-6 md:px-12 lg:px-24 pt-12 pb-8">
+      <section className="px-6 md:px-12 lg:px-24 pt-20 md:pt-28 pb-8">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-none">
           Owen Puhl
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-md">
-          Applied Mathematics at Columbia University
+          Applied Mathematics at Columbia University. Culture enthusiast.
         </p>
         <div className="flex flex-wrap gap-6 mt-4 text-sm text-muted-foreground">
           <span className="text-muted-foreground">
             ogp2110@columbia.edu
           </span>
-          <a 
-            href="https://github.com/owenpuhl" 
-            target="_blank" 
+          <a
+            href="https://github.com/owenpuhl"
+            target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors link-underline"
           >
             GitHub
           </a>
-          <a 
-            href="https://linkedin.com/in/owenpuhl" 
-            target="_blank" 
+          <a
+            href="https://linkedin.com/in/owenpuhl"
+            target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors link-underline"
           >
@@ -88,10 +103,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Headshot + Background */}
-      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16">
+      {/* Headshot + Background - Parallax Section */}
+      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16 overflow-hidden">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div className="lg:col-span-4">
+          <div
+            className="lg:col-span-4"
+            style={{ transform: `translateY(${scrollY * 0.07}px)` }}
+          >
             <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
               <img
                 src={headshot}
@@ -100,19 +118,14 @@ const Index = () => {
               />
             </div>
           </div>
-          <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8">
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              Based in Ohio and New York. Motivated by logic, pattern, and aesthetics.
-            </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              My background is in business, technology, and behavioral research.
-            </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              I'm currently learning to shoot film photography and live code music.
-            </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              Always building and looking for new projects + challenges!
-            </p>
+          <div
+            ref={textSectionRef}
+            className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8"
+            style={{ transform: `translateY(${scrollY * -0.12}px)` }}
+          >
+            {paragraphs.map((text, index) => (
+              <BlurText key={index}>{text}</BlurText>
+            ))}
           </div>
         </div>
       </section>
@@ -144,7 +157,7 @@ const Index = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Owen Puhl
+            © 2026 Owen Puhl
           </p>
         </div>
       </footer>
