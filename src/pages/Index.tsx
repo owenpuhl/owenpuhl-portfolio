@@ -7,18 +7,18 @@ import headshot from "@/assets/PuhlOwenHeadshotWebsite.jpeg";
 
 // Gallery images - using public path
 const galleryImages = [
-  { src: "/PortfolioFilm1/88840005.JPG", alt: "Portfolio moment", span: "col-span-8 row-span-2" },
-  { src: "/PortfolioFilm1/88840009.JPG", alt: "Film study", span: "col-span-4 row-span-1" },
-  { src: "/PortfolioFilm1/88840010.JPG", alt: "Captured light", span: "col-span-4 row-span-1" },
-  { src: "/PortfolioFilm1/88840011.JPG", alt: "Composition", span: "col-span-4 row-span-2" },
-  { src: "/PortfolioFilm1/88840012.JPG", alt: "Detail", span: "col-span-4 row-span-1" },
-  { src: "/PortfolioFilm1/88840013.JPG", alt: "Moment", span: "col-span-6 row-span-1" },
-  { src: "/PortfolioFilm1/88840014.JPG", alt: "Perspective", span: "col-span-6 row-span-2" },
-  { src: "/PortfolioFilm1/88840015.JPG", alt: "Frame", span: "col-span-6 row-span-1" },
-  { src: "/PortfolioFilm1/88840016.JPG", alt: "Expression", span: "col-span-4 row-span-1" },
-  { src: "/PortfolioFilm1/88840017.JPG", alt: "Scene", span: "col-span-4 row-span-1" },
-  { src: "/PortfolioFilm1/88840018.JPG", alt: "Atmosphere", span: "col-span-8 row-span-1" },
-  { src: "/PortfolioFilm1/88840019.JPG", alt: "Story", span: "col-span-4 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840005.JPG", alt: "Portfolio moment", span: "col-span-8 row-span-2" },
+  { src: "/images/PortfolioFilm1/88840009.JPG", alt: "Film study", span: "col-span-4 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840010.JPG", alt: "Captured light", span: "col-span-4 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840011.JPG", alt: "Composition", span: "col-span-4 row-span-2" },
+  { src: "/images/PortfolioFilm1/88840012.JPG", alt: "Detail", span: "col-span-4 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840013.JPG", alt: "Moment", span: "col-span-6 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840014.JPG", alt: "Perspective", span: "col-span-6 row-span-2" },
+  { src: "/images/PortfolioFilm1/88840015.JPG", alt: "Frame", span: "col-span-6 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840016.JPG", alt: "Expression", span: "col-span-4 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840017.JPG", alt: "Scene", span: "col-span-4 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840018.JPG", alt: "Atmosphere", span: "col-span-8 row-span-1" },
+  { src: "/images/PortfolioFilm1/88840019.JPG", alt: "Story", span: "col-span-4 row-span-1" },
 ];
 
 const paragraphs = [

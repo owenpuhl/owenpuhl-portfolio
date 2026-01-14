@@ -6,7 +6,7 @@ const workItems = [
     role: "Market Mapping & Executive Search",
     description: "Part-time internship during Fall '25 and Spring '26. The firm places exceptional candidates + invests in top tech startups backed by the following:",
     tags: ["Strategy", "Recruiting", "Tech"],
-    image: "/BleeckerVC.jpg",
+    image: "/images/BleeckerVC.jpg",
   },
 ];
 

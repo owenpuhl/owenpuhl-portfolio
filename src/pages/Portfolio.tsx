@@ -4,9 +4,9 @@ import { ExternalLink } from "lucide-react";
 
 // Concert videos - using public path strings
 const concertVideos = [
-  "/MusicLive/IMG_0406.mov",
-  "/MusicLive/IMG_1878.MOV",
-  "/MusicLive/IMG_2782.MOV",
+  "/images/MusicLive/IMG_0406.mov",
+  "/images/MusicLive/IMG_1878.MOV",
+  "/images/MusicLive/IMG_2782.MOV",
 ];
 
 const Portfolio = () => {
@@ -74,7 +74,7 @@ const Portfolio = () => {
           >
             <div className="bg-muted/30 border border-border overflow-hidden">
               <img
-                src="/Headshots/Portrait1.JPG"
+                src="/images/Headshots/Portrait1.JPG"
                 alt="Portrait"
                 className="h-auto w-full"
               />
@@ -157,14 +157,14 @@ const Portfolio = () => {
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   <div className="bg-muted/30 border border-border overflow-hidden">
                     <img
-                      src="/WKCR1.jpg"
+                      src="/images/WKCR1.jpg"
                       alt="WKCR 1"
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="bg-muted/30 border border-border overflow-hidden">
                     <img
-                      src="/WKCR2.JPG"
+                      src="/images/WKCR2.JPG"
                       alt="WKCR 2"
                       className="w-full h-auto"
                     />
@@ -178,7 +178,7 @@ const Portfolio = () => {
                 </p>
                 <div className="aspect-[4/3] bg-muted/30 border border-border overflow-hidden mt-4">
                   <img
-                    src="/StrudelREPL.jpg"
+                    src="/images/StrudelREPL.jpg"
                     alt="Strudel REPL"
                     className="w-full h-full object-cover object-top"
                   />
@@ -227,14 +227,14 @@ const Portfolio = () => {
             <div className="grid grid-cols-2 gap-4 md:gap-6 mt-8">
               <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
                 <img
-                  src="/PuhlPoster.jpg"
+                  src="/images/PuhlPoster.jpg"
                   alt="Puhl poster"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
                 <img
-                  src="/PuhlSpeech.jpeg"
+                  src="/images/PuhlSpeech.jpeg"
                   alt="Puhl speech"
                   className="w-full h-full object-cover"
                 />
