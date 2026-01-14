@@ -25,8 +25,11 @@ const Research = () => {
               <h2 className="font-display text-3xl md:text-4xl text-foreground mt-2">
                 Cambridge
               </h2>
+              <p className="font-serif text-sm text-muted-foreground mt-1">
+                Cambridge University, Judge Business School
+              </p>
               <p className="font-serif text-lg text-muted-foreground mt-4 leading-relaxed">
-                Details about your Cambridge research experience will go here. This is the featured, consequential choice section.
+                Analyzing the effectiveness of climate-based messaging across 26 countries and 11,900 respondents.
               </p>
               <a 
                 href="https://researchgate.net" 
@@ -46,6 +49,22 @@ const Research = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                <div className="overflow-hidden">
+                  <img
+                    src="/CambridgeGraphicClimateMediation.jpg"
+                    alt="Cambridge Graphic Climate Mediation"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="overflow-hidden">
+                  <img
+                    src="/PuhlCambridgeGala.jpg"
+                    alt="Puhl Cambridge Gala"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -61,9 +80,6 @@ const Research = () => {
                 <h3 className="font-display text-xl md:text-2xl text-foreground">
                   AI Policy Research
                 </h3>
-                <p className="font-serif text-sm text-muted-foreground mt-1">
-                  Dr. Renzhe Yu
-                </p>
                 <p className="font-serif text-xs text-muted-foreground mt-1">
                   Teachers College · Columbia Data Science Institute
                 </p>
@@ -83,9 +99,6 @@ const Research = () => {
                 <h3 className="font-display text-xl md:text-2xl text-foreground">
                   Political Accountability
                 </h3>
-                <p className="font-serif text-sm text-muted-foreground mt-1">
-                  Dr. Victoria Moorers
-                </p>
                 <p className="font-serif text-xs text-muted-foreground mt-1">
                   Columbia Department of Economics
                 </p>
@@ -134,7 +147,7 @@ const Research = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Owen Puhl
+            © 2026 Owen Puhl
           </p>
         </div>
       </footer>

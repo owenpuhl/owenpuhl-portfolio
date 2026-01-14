@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import { ExternalLink } from "lucide-react";
 
 const Leadership = () => {
   return (
@@ -11,7 +12,7 @@ const Leadership = () => {
           Leadership
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-2xl">
-          Building communities and driving impact through student organizations.
+          I lead best where I can build communities and drive impact.
         </p>
       </section>
 
@@ -29,10 +30,19 @@ const Leadership = () => {
                 <p className="font-serif text-muted-foreground mt-2">
                   Director of Professional Development
                 </p>
+                <a
+                  href="https://ascendgroup.co/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                >
+                  <span className="font-serif">Ascend</span>
+                  <ExternalLink size={14} />
+                </a>
               </div>
               <div className="lg:col-span-6 lg:col-start-6">
                 <p className="font-serif text-lg md:text-xl text-foreground leading-relaxed">
-                  Description of your work with Ascend Consulting Group. What you built, led, and accomplished.
+                  Founding member of Columbia University chapter. Led 6-week training program for new analysts. Student consultancy organization focused on technology consulting and UI/UX design.
                 </p>
                 <div className="bg-muted/30 border border-border overflow-hidden mt-6">
                   <img
@@ -55,11 +65,20 @@ const Leadership = () => {
                 <p className="font-serif text-muted-foreground mt-2">
                   Technology Chair
                 </p>
+                <a
+                  href="https://cqbs.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                >
+                  <span className="font-serif">CQBS</span>
+                  <ExternalLink size={14} />
+                </a>
               </div>
               <div className="lg:col-span-6 lg:col-start-6 space-y-8">
-                {/* Spring 2025 */}
+                {/* Spring 2025 Events */}
                 <div>
-                  <h3 className="font-display text-lg text-foreground">Spring 2025</h3>
+                  <h3 className="font-display text-lg text-foreground">Spring 2025 Events:</h3>
                   <div className="bg-muted/30 border border-border overflow-hidden mt-4">
                     <img
                       src="/CQBSSpring25.jpg"
@@ -68,13 +87,13 @@ const Leadership = () => {
                     />
                   </div>
                   <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
-                    Details about your Spring 2025 role and initiatives.
+                    
                   </p>
                 </div>
                 
-                {/* Fall 2025 */}
+                {/* Fall 2025 Events */}
                 <div>
-                  <h3 className="font-display text-lg text-foreground">Fall 2025</h3>
+                  <h3 className="font-display text-lg text-foreground">Fall 2025 Events:</h3>
                   <div className="bg-muted/30 border border-border overflow-hidden mt-4">
                     <img
                       src="/CQBSFall25.jpg"
@@ -83,7 +102,7 @@ const Leadership = () => {
                     />
                   </div>
                   <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
-                    Details about your Fall 2025 role and initiatives.
+                    Digital infrastructure and mentorship among members in CS and Engineering.
                   </p>
                 </div>
               </div>
@@ -97,7 +116,7 @@ const Leadership = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Owen Puhl
+            © 2026 Owen Puhl
           </p>
         </div>
       </footer>

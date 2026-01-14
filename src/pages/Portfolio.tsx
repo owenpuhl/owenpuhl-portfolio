@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import Navigation from "@/components/Navigation";
 import { ExternalLink } from "lucide-react";
 
@@ -11,6 +11,15 @@ const concertVideos = [
 
 const Portfolio = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Intersection observer for video autoplay
   useEffect(() => {
@@ -40,27 +49,37 @@ const Portfolio = () => {
       <Navigation />
       
       {/* Hero */}
-      <section className="px-6 md:px-12 lg:px-24 pt-24 md:pt-32 pb-12">
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-foreground leading-none">
-          Portfolio
-        </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-2xl">
-          Been to over 50 concerts. Visited 7 countries. Always looking for the next moment.
-        </p>
-      </section>
-
-      {/* Philosophy Statement */}
-      <section className="px-6 md:px-12 lg:px-24 pb-16">
-        <div className="max-w-3xl">
-          <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed">
-            I have a knack for getting in the center of action. I thrive where there's tension, uncertainty, and energy.
-          </p>
-          <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed mt-6">
-            I love to be at barricade. I love <em>moments</em>, and textures, and patterns.
-          </p>
-          <p className="font-serif text-xl md:text-2xl text-muted-foreground leading-relaxed mt-6">
-            On noticing.
-          </p>
+      <section className="px-6 md:px-12 lg:px-24 pt-24 md:pt-32 pb-12 overflow-hidden">
+        <div className="flex gap-8 lg:gap-16">
+          <div
+            className="flex-1 self-start flex flex-col justify-center gap-4"
+            style={{ transform: `translateY(${scrollY * -0.12}px)` }}
+          >
+            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-foreground leading-none">
+              Portfolio
+            </h1>
+            <p className="ffont-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+              I've been to over 50 concerts, and visited 7 countries. I pride myself on noticing all I can.
+            </p>
+            <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+              I have a knack for getting in the center of action. I thrive where there's tension, uncertainty, and energy.
+            </p>
+            <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+              I love to be at barricade. I love <em>moments</em>.
+            </p>
+          </div>
+          <div
+            className="flex-shrink-0 self-start w-full max-w-md"
+            style={{ transform: `translateY(${scrollY * 0.07}px)` }}
+          >
+            <div className="bg-muted/30 border border-border overflow-hidden">
+              <img
+                src="/Headshots/Portrait1.JPG"
+                alt="Portrait"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -126,6 +145,15 @@ const Portfolio = () => {
                 <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
                   Programming music on Columbia's radio station. Catch me on Transfigured Night, every other Friday from 2-6 AM!
                 </p>
+                <a
+                  href="https://wkcr.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
+                >
+                  <span className="font-serif">wkcr.org</span>
+                  <ExternalLink size={14} />
+                </a>
                 <div className="grid grid-cols-2 gap-4 mt-4">
                   <div className="bg-muted/30 border border-border overflow-hidden">
                     <img
@@ -220,7 +248,7 @@ const Portfolio = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Owen Puhl
+            © 2026 Owen Puhl
           </p>
         </div>
       </footer>

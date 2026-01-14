@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
@@ -22,43 +22,14 @@ const galleryImages = [
 ];
 
 const paragraphs = [
-  "Based in Ohio and New York. Motivated by logic, strategy, and culture.",
-  "My background is in business, technology, and behavioral research.",
-  "I'm currently learning to shoot film photography and live code music.",
-  "This is a living portfolio to showcase my projects and interests as they evolve.",
-  "Always building and looking for new projects + challenges!",
+  "Based in Ohio and New York. Motivated by logic, strategy, and pattern.",
+  "My background is in business, technology, and behavioral research.",,
+  "Living portfolio. Always building & looking for new projects and challenges!",
 ];
 
 const BlurText = ({ children }: { children: string }) => {
-  const ref = useRef<HTMLParagraphElement>(null);
-  const [blur, setBlur] = useState(8);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!ref.current) return;
-      const rect = ref.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate how far into the viewport the element is (0 to 1)
-      const visibleRatio = 1 - (rect.top / (windowHeight * 0.7));
-      const clampedRatio = Math.max(0, Math.min(1, visibleRatio));
-      
-      // Blur goes from 8px to 0px as element scrolls into view
-      const newBlur = 8 * (1 - clampedRatio);
-      setBlur(newBlur);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Initial check
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <p
-      ref={ref}
-      className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed transition-[filter] duration-100"
-      style={{ filter: `blur(${blur}px)` }}
-    >
+    <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
       {children}
     </p>
   );
@@ -66,6 +37,16 @@ const BlurText = ({ children }: { children: string }) => {
 
 const Index = () => {
   const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [scrollY, setScrollY] = useState(0);
+  const textSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -90,7 +71,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero - Name, title, and contact */}
       <section className="px-6 md:px-12 lg:px-24 pt-20 md:pt-28 pb-8">
         <h1 className="font-display text-5xl md:text-7xl lg:text-8xl text-foreground leading-none">
@@ -103,17 +84,17 @@ const Index = () => {
           <span className="text-muted-foreground">
             ogp2110@columbia.edu
           </span>
-          <a 
-            href="https://github.com/owenpuhl" 
-            target="_blank" 
+          <a
+            href="https://github.com/owenpuhl"
+            target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors link-underline"
           >
             GitHub
           </a>
-          <a 
-            href="https://linkedin.com/in/owenpuhl" 
-            target="_blank" 
+          <a
+            href="https://linkedin.com/in/owenpuhl"
+            target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors link-underline"
           >
@@ -122,10 +103,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Headshot + Background */}
-      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16">
+      {/* Headshot + Background - Parallax Section */}
+      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16 overflow-hidden">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div className="lg:col-span-4">
+          <div
+            className="lg:col-span-4"
+            style={{ transform: `translateY(${scrollY * 0.07}px)` }}
+          >
             <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
               <img
                 src={headshot}
@@ -134,7 +118,11 @@ const Index = () => {
               />
             </div>
           </div>
-          <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8">
+          <div
+            ref={textSectionRef}
+            className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8"
+            style={{ transform: `translateY(${scrollY * -0.12}px)` }}
+          >
             {paragraphs.map((text, index) => (
               <BlurText key={index}>{text}</BlurText>
             ))}
@@ -169,7 +157,7 @@ const Index = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Owen Puhl
+            © 2026 Owen Puhl
           </p>
         </div>
       </footer>

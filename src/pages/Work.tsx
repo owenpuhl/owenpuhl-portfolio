@@ -4,7 +4,7 @@ const workItems = [
   {
     company: "Bleecker Street",
     role: "Market Mapping & Executive Search",
-    description: "Conducted market mapping and executive search engagements for technology startups across New York City.",
+    description: "Part-time internship during Fall '25 and Spring '26. The firm places exceptional candidates + invests in top tech startups backed by the following:",
     tags: ["Strategy", "Recruiting", "Tech"],
     image: "/BleeckerVC.jpg",
   },
@@ -21,7 +21,7 @@ const Work = () => {
           Work
         </h1>
         <p className="text-lg md:text-xl text-muted-foreground mt-4 max-w-2xl">
-          Selected professional experiences in consulting, technology, and design.
+          Selected professional experience in technology and consulting.
         </p>
       </section>
 
@@ -74,7 +74,7 @@ const Work = () => {
       <footer className="border-t border-border">
         <div className="px-6 md:px-12 lg:px-24 py-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Owen Puhl
+            © 2026 Owen Puhl
           </p>
         </div>
       </footer>
