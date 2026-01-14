@@ -65,7 +65,7 @@ const Portfolio = () => {
               I have a knack for getting in the center of action. I thrive where there's tension, uncertainty, and energy.
             </p>
             <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
-              I love to be at barricade. I love <em>moments</em>.
+              I love to be at the barricade. I love <em>moments</em>.
             </p>
           </div>
           <div
