@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
@@ -23,6 +23,16 @@ const galleryImages = [
 
 const Index = () => {
   const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
+  const [scrollY, setScrollY] = useState(0);
+  const textSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,10 +89,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Headshot + Background */}
-      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16">
+      {/* Headshot + Background - Parallax Section */}
+      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16 overflow-hidden">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div className="lg:col-span-4">
+          <div 
+            className="lg:col-span-4"
+            style={{ transform: `translateY(${scrollY * 0.05}px)` }}
+          >
             <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
               <img
                 src={headshot}
@@ -91,20 +104,36 @@ const Index = () => {
               />
             </div>
           </div>
-          <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8">
+          <div 
+            ref={textSectionRef}
+            className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8"
+            style={{ transform: `translateY(${scrollY * -0.08}px)` }}
+          >
             <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
               Based in Ohio and New York. Motivated by logic, strategy, and culture.
             </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+            <p 
+              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
+              style={{ transform: `translateY(${scrollY * 0.02}px)` }}
+            >
               My background is in business, technology, and behavioral research.
             </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+            <p 
+              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
+              style={{ transform: `translateY(${scrollY * 0.04}px)` }}
+            >
               I'm currently learning to shoot film photography and live code music.
             </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+            <p 
+              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
+              style={{ transform: `translateY(${scrollY * 0.06}px)` }}
+            >
               This is a living portfolio to showcase my projects and interests as they evolve.
             </p>
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+            <p 
+              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
+              style={{ transform: `translateY(${scrollY * 0.08}px)` }}
+            >
               Always building and looking for new projects + challenges!
             </p>
           </div>
