@@ -91,33 +91,22 @@ const Index = () => {
               />
             </div>
           </div>
-          <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-12">
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Philosophy</span>
-              <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-                <span className="italic">This is how I see the world</span>—through the intersection of logic, culture, and creativity.
-              </p>
-            </div>
-            
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Background</span>
-              <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed">
-                Based between <span className="border-b border-foreground/30 hover:border-foreground transition-colors cursor-default">Ohio</span> and <span className="border-b border-foreground/30 hover:border-foreground transition-colors cursor-default">New York</span>. My work spans business, technology, and behavioral research.
-              </p>
-            </div>
-            
-            <div className="space-y-2">
-              <span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Currently</span>
-              <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed">
-                Learning to shoot <span className="text-muted-foreground hover:text-foreground transition-colors">film photography</span> and <span className="text-muted-foreground hover:text-foreground transition-colors">live code music</span>.
-              </p>
-            </div>
-            
-            <div className="pt-4 border-t border-border">
-              <p className="font-serif text-xl text-muted-foreground leading-relaxed">
-                A living portfolio—projects and interests as they evolve. Always building.
-              </p>
-            </div>
+          <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8">
+            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+              Based in Ohio and New York. Motivated by logic, strategy, and culture.
+            </p>
+            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+              My background is in business, technology, and behavioral research.
+            </p>
+            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+              I'm currently learning to shoot film photography and live code music.
+            </p>
+            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+              This is a living portfolio to showcase my projects and interests as they evolve.
+            </p>
+            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
+              Always building and looking for new projects + challenges!
+            </p>
           </div>
         </div>
       </section>
