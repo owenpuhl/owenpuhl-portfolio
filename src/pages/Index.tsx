@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
@@ -21,18 +21,51 @@ const galleryImages = [
   { src: "/PortfolioFilm1/88840019.JPG", alt: "Story", span: "col-span-4 row-span-1" },
 ];
 
-const Index = () => {
-  const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [scrollY, setScrollY] = useState(0);
-  const textSectionRef = useRef<HTMLDivElement>(null);
+const paragraphs = [
+  "Based in Ohio and New York. Motivated by logic, strategy, and culture.",
+  "My background is in business, technology, and behavioral research.",
+  "I'm currently learning to shoot film photography and live code music.",
+  "This is a living portfolio to showcase my projects and interests as they evolve.",
+  "Always building and looking for new projects + challenges!",
+];
+
+const BlurText = ({ children }: { children: string }) => {
+  const ref = useRef<HTMLParagraphElement>(null);
+  const [blur, setBlur] = useState(8);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollY(window.scrollY);
+      if (!ref.current) return;
+      const rect = ref.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate how far into the viewport the element is (0 to 1)
+      const visibleRatio = 1 - (rect.top / (windowHeight * 0.7));
+      const clampedRatio = Math.max(0, Math.min(1, visibleRatio));
+      
+      // Blur goes from 8px to 0px as element scrolls into view
+      const newBlur = 8 * (1 - clampedRatio);
+      setBlur(newBlur);
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial check
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  return (
+    <p
+      ref={ref}
+      className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed transition-[filter] duration-100"
+      style={{ filter: `blur(${blur}px)` }}
+    >
+      {children}
+    </p>
+  );
+};
+
+const Index = () => {
+  const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -89,13 +122,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Headshot + Background - Parallax Section */}
-      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16 overflow-hidden">
+      {/* Headshot + Background */}
+      <section className="px-6 md:px-12 lg:px-24 py-12 md:py-16">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div 
-            className="lg:col-span-4"
-            style={{ transform: `translateY(${scrollY * 0.05}px)` }}
-          >
+          <div className="lg:col-span-4">
             <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
               <img
                 src={headshot}
@@ -104,38 +134,10 @@ const Index = () => {
               />
             </div>
           </div>
-          <div 
-            ref={textSectionRef}
-            className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8"
-            style={{ transform: `translateY(${scrollY * -0.08}px)` }}
-          >
-            <p className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed">
-              Based in Ohio and New York. Motivated by logic, strategy, and culture.
-            </p>
-            <p 
-              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
-              style={{ transform: `translateY(${scrollY * 0.02}px)` }}
-            >
-              My background is in business, technology, and behavioral research.
-            </p>
-            <p 
-              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
-              style={{ transform: `translateY(${scrollY * 0.04}px)` }}
-            >
-              I'm currently learning to shoot film photography and live code music.
-            </p>
-            <p 
-              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
-              style={{ transform: `translateY(${scrollY * 0.06}px)` }}
-            >
-              This is a living portfolio to showcase my projects and interests as they evolve.
-            </p>
-            <p 
-              className="font-serif text-3xl md:text-4xl text-foreground leading-relaxed"
-              style={{ transform: `translateY(${scrollY * 0.08}px)` }}
-            >
-              Always building and looking for new projects + challenges!
-            </p>
+          <div className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8">
+            {paragraphs.map((text, index) => (
+              <BlurText key={index}>{text}</BlurText>
+            ))}
           </div>
         </div>
       </section>
