@@ -58,7 +58,7 @@ const Portfolio = () => {
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-foreground leading-none">
               Portfolio
             </h1>
-            <p className="ffont-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+            <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
               I've been to over 50 concerts, and visited 7 countries. I pride myself on noticing all I can.
             </p>
             <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
