@@ -50,26 +50,26 @@ const Portfolio = () => {
       
       {/* Hero */}
       <section className="px-6 md:px-12 lg:px-24 pt-24 md:pt-32 pb-12 overflow-hidden">
-        <div className="flex gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
           <div
-            className="flex-1 self-start flex flex-col justify-center gap-4"
+            className="lg:flex-1 self-start flex flex-col justify-center gap-4"
             style={{ transform: `translateY(${scrollY * -0.12}px)` }}
           >
-            <h1 className="font-display text-4xl md:text-6xl lg:text-7xl text-foreground leading-none">
+            <h1 className="font-display text-3xl md:text-5xl lg:text-7xl text-foreground leading-none">
               Portfolio
             </h1>
-            <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+            <p className="font-serif text-lg md:text-2xl lg:text-3xl text-foreground leading-relaxed max-w-2xl">
               I've been to over 50 concerts, and visited 7 countries. I pride myself on noticing all I can.
             </p>
-            <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+            <p className="font-serif text-lg md:text-2xl lg:text-3xl text-foreground leading-relaxed max-w-2xl">
               I have a knack for getting in the center of action. I thrive where there's tension, uncertainty, and energy.
             </p>
-            <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed max-w-2xl">
+            <p className="font-serif text-lg md:text-2xl lg:text-3xl text-foreground leading-relaxed max-w-2xl">
               I love to be at the barricade. I love <em>moments</em>.
             </p>
           </div>
           <div
-            className="flex-shrink-0 self-start w-full max-w-md"
+            className="w-full max-w-md lg:flex-shrink-0 lg:self-start"
             style={{ transform: `translateY(${scrollY * 0.07}px)` }}
           >
             <div className="bg-muted/30 border border-border overflow-hidden">
