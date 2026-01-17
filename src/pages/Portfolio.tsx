@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import { ExternalLink } from "lucide-react";
 
@@ -11,25 +11,6 @@ const concertVideos = [
 
 const Portfolio = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const [scrollY, setScrollY] = useState(0);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
-    const handleMediaChange = (e: MediaQueryListEvent) => {
-      setIsLargeScreen(e.matches);
-    };
-    mediaQuery.addEventListener("change", handleMediaChange);
-    return () => mediaQuery.removeEventListener("change", handleMediaChange);
-  }, []);
 
   // Intersection observer for video autoplay
   useEffect(() => {
@@ -63,7 +44,6 @@ const Portfolio = () => {
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
           <div
             className="lg:flex-1 self-start flex flex-col justify-center gap-4"
-            style={{ transform: `translateY(${isLargeScreen ? scrollY * -0.12 : 0}px)` }}
           >
             <h1 className="font-display text-3xl md:text-5xl lg:text-7xl text-foreground leading-none">
               Portfolio
@@ -80,7 +60,6 @@ const Portfolio = () => {
           </div>
           <div
             className="w-full max-w-md lg:flex-shrink-0 lg:self-start"
-            style={{ transform: `translateY(${isLargeScreen ? scrollY * 0.07 : 0}px)` }}
           >
             <div className="bg-muted/30 border border-border overflow-hidden">
               <img
