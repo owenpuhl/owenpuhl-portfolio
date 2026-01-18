@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 
@@ -37,16 +37,7 @@ const BlurText = ({ children }: { children: string }) => {
 
 const Index = () => {
   const imagesRef = useRef<(HTMLDivElement | null)[]>([]);
-  const [scrollY, setScrollY] = useState(0);
   const textSectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -108,7 +99,6 @@ const Index = () => {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div
             className="lg:col-span-4"
-            style={{ transform: `translateY(${scrollY * 0.07}px)` }}
           >
             <div className="aspect-[3/4] bg-muted/30 border border-border overflow-hidden">
               <img
@@ -121,7 +111,6 @@ const Index = () => {
           <div
             ref={textSectionRef}
             className="lg:col-span-7 lg:col-start-6 flex flex-col justify-center gap-8"
-            style={{ transform: `translateY(${scrollY * -0.12}px)` }}
           >
             {paragraphs.map((text, index) => (
               <BlurText key={index}>{text}</BlurText>
