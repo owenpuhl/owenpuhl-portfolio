@@ -65,15 +65,6 @@ const Leadership = () => {
                 <p className="font-serif text-muted-foreground mt-2">
                   Technology Chair
                 </p>
-                <a
-                  href="https://cqbs.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 mt-4 text-sm text-muted-foreground hover:text-foreground transition-colors link-underline"
-                >
-                  <span className="font-serif">CQBS</span>
-                  <ExternalLink size={14} />
-                </a>
               </div>
               <div className="lg:col-span-6 lg:col-start-6 space-y-8">
                 {/* Spring 2025 Events */}
@@ -104,6 +95,18 @@ const Leadership = () => {
                   <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-4">
                     Digital infrastructure and mentorship among members in CS and Engineering.
                   </p>
+                </div>
+
+                {/* Website */}
+                <div>
+                  <h3 className="font-display text-lg text-foreground">Website:</h3>
+                  <div className="bg-muted/30 border border-border overflow-hidden mt-4">
+                    <img
+                      src="/images/CQBSWebsiteExample.jpg"
+                      alt="CQBS Website"
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
