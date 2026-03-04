@@ -167,7 +167,7 @@ const Portfolio = () => {
                   Exploring live coding electronic music. I maintain an archive of compositions created with Strudel, ranging from experimental electroclash to generative soundscapes.
                 </p>
                 <Link
-                  to="/strudel"
+                  to="/portfolio/strudel"
                   className="inline-block mt-4 px-4 py-2 border border-primary/50 text-primary font-serif text-sm hover:bg-primary/5 transition-colors"
                 >
                   Browse archive →
