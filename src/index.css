@@ -58,6 +58,12 @@
     --sidebar-accent-foreground: 30 10% 20%;
     --sidebar-border: 35 15% 85%;
     --sidebar-ring: 30 10% 20%;
+
+    /* Strudel components typography */
+    --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+    --font-sans: system-ui, sans-serif;
+    --font-mono: 'Fira Code', 'Consolas', monospace;
+    --code-bg: 42 14% 93%;
   }
 
   .dark {
@@ -104,6 +110,12 @@
     --sidebar-accent-foreground: 40 20% 90%;
     --sidebar-border: 30 8% 18%;
     --sidebar-ring: 40 20% 90%;
+
+    /* Strudel components typography - dark mode */
+    --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+    --font-sans: system-ui, sans-serif;
+    --font-mono: 'Fira Code', 'Consolas', monospace;
+    --code-bg: 30 8% 18%;
   }
 }
 

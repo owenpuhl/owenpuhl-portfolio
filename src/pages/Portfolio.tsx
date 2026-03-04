@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { ExternalLink } from "lucide-react";
 
@@ -163,15 +164,14 @@ const Portfolio = () => {
               <div>
                 <h3 className="font-display text-lg text-foreground">Strudel</h3>
                 <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
-                  Experimenting with live coding music. Snippet of one of my favorites so far.
+                  Exploring live coding electronic music. I maintain an archive of compositions created with Strudel, ranging from experimental electroclash to generative soundscapes.
                 </p>
-                <div className="aspect-[4/3] bg-muted/30 border border-border overflow-hidden mt-4">
-                  <img
-                    src="/images/StrudelREPL.jpg"
-                    alt="Strudel REPL"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
+                <Link
+                  to="/strudel"
+                  className="inline-block mt-4 px-4 py-2 border border-primary/50 text-primary font-serif text-sm hover:bg-primary/5 transition-colors"
+                >
+                  Browse archive →
+                </Link>
               </div>
             </div>
           </div>

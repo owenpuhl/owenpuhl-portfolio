@@ -12,6 +12,7 @@ const navLinks = [
   { label: "Research", path: "/research" },
   { label: "Leadership", path: "/leadership" },
   { label: "Portfolio", path: "/portfolio" },
+  { label: "Strudel", path: "/strudel" },
 ];
 
 const Navigation = () => {
