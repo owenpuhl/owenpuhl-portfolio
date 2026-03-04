@@ -98,7 +98,6 @@ $: s("~ ~ ~ white")
     featured: false,
     code: `// Classic Pop: I - V - vi - IV (C - G - Am - F)
 $: note("c4*8 g4*8 a4*8 f4*8")
-  .chord("")
   .s("sawtooth")
   .lpf(2500).resonance(6)
   .gain(0.5).coarse(6).distort(0.5)
@@ -118,7 +117,7 @@ $: note("c4*8 g4*8 a4*8 f4*8")
     code: `// Lydian Magic: I - II - I - II (C - D - C - D)
 // Creates floating, witchpop ethereal quality
 $: note("c4*8 d4*8 c4*8 d4*8")
-  .chord("")
+
   .s("sawtooth")
   .lpf(2500).resonance(8)
   .gain(0.5).coarse(8).distort(0.6)
@@ -138,7 +137,7 @@ $: note("c4*8 d4*8 c4*8 d4*8")
     code: `// Chromatic Descent: I - bVII - bVI - V (C - Bb - Ab - G)
 // Major chords descending = tension and release
 $: note("c4*8 bb4*8 ab4*8 g4*8")
-  .chord("")
+
   .s("square")
   .lpf(2200).resonance(10)
   .gain(0.55).coarse(10).shape(0.5)
@@ -158,7 +157,7 @@ $: note("c4*8 bb4*8 ab4*8 g4*8")
     code: `// Modal Interchange: I - bVI - bIII - bVII (C - Ab - Eb - Bb)
 // Borrowed from C minor, but all major chords
 $: note("c4*8 ab4*8 eb4*8 bb4*8")
-  .chord("")
+
   .s("sawtooth")
   .lpf(2800).resonance(7)
   .gain(0.5).distort(0.6).coarse(6)
@@ -178,7 +177,7 @@ $: note("c4*8 ab4*8 eb4*8 bb4*8")
     code: `// Tritone Substitution: I - bII - I - V (C - Db - C - G)
 // Very dissonant and futuristic
 $: note("c4*8 db4*8 c4*8 g4*8")
-  .chord("")
+
   .s("sawtooth")
   .lpf(2400).resonance(12)
   .gain(0.5).coarse(12).distort(0.7)
@@ -198,7 +197,7 @@ $: note("c4*8 db4*8 c4*8 g4*8")
     code: `// Whole Tone Movement: I - II - III - #IV (C - D - E - F#)
 // All major = very bright, no traditional resolution
 $: note("c4*8 d4*8 e4*8 fs4*8")
-  .chord("")
+
   .s("square")
   .lpf(2600).resonance(8)
   .gain(0.5).coarse(8).shape(0.4)
@@ -218,7 +217,7 @@ $: note("c4*8 d4*8 e4*8 fs4*8")
     code: `// Phrygian Dominant: I - bII - III - IV (C - Db - E - F)
 // Exotic, dark, mystical
 $: note("c4*8 db4*8 e4*8 f4*8")
-  .chord("")
+
   .s("sawtooth")
   .lpf(2200).resonance(10)
   .gain(0.55).coarse(10).distort(0.65)
@@ -319,7 +318,7 @@ $: note("c1!4")
 
 // Lydian major progression (dreamy)
 $: note("c4*8 d4*8 c4*8 d4*8")
-  .chord("")
+
   .s("sawtooth")
   .lpf(2800)
   .resonance(6)
@@ -443,7 +442,7 @@ $: note(rand.range(36, 72))
 
 // Tritone chaos chords
 $: note("c4*8 db4*8 c4*8 b3*8")
-  .chord("")
+
   .s("square")
   .degradeBy(0.5)
   .lpf(rand.range(1500, 3000))
@@ -527,7 +526,7 @@ $: note(rand.range(36, 72))
 
 // Lydian chord stabs
 $: note("c4*8 d4*8 c4*8 d4*8")
-  .chord("")
+
   .s("square")
   .degradeBy(0.3)
   .lpf(2800)
