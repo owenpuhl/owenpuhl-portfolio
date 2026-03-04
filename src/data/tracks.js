@@ -88,7 +88,7 @@ $: s("~ ~ ~ white")
   {
     id: 'chords-classic-pop',
     title: 'Classic Pop Progression',
-    description: 'The I–V–vi–IV everyone knows, but run through crunchy 8th-note sawtooth stabs. Sounds way more fun than it should.',
+    description: 'Classic pop progression (I–V–vi–IV) enhanced with aggressive sawtooth articulation. Harmonic familiarity paired with textural interest.',
     genre: 'Electroclash',
     tags: ['chords', 'pop', 'bright', 'progression', 'sawtooth'],
     bpm: 120,
@@ -106,7 +106,7 @@ $: note("c4*8 g4*8 a4*8 f4*8")
   {
     id: 'chords-lydian-magic',
     title: 'Lydian Magic',
-    description: 'Just two major chords rocking back and forth, but the Lydian interval makes it feel like floating. Very witchpop.',
+    description: 'Two major chords alternating with Lydian modal inflection. Harmonic suspension and atmospheric color through modal interchange.',
     genre: 'Witchpop',
     tags: ['chords', 'lydian', 'dreamy', 'ethereal', 'witchpop'],
     bpm: 120,
@@ -124,109 +124,9 @@ $: note("c4*8 d4*8 c4*8 d4*8")
   .ad(0.005, 0.06)`,
   },
   {
-    id: 'chords-chromatic-descent',
-    title: 'Chromatic Descent',
-    description: 'Major chords sliding down chromatically — every step feels like the floor dropping out. Pure drama.',
-    genre: 'Electroclash',
-    tags: ['chords', 'chromatic', 'dark', 'tension', 'square-wave'],
-    bpm: 120,
-    createdAt: '2025-01-01',
-    updatedAt: '2025-01-01',
-    source: 'chord-progressions.js',
-    featured: true,
-    code: `// Chromatic Descent: I - bVII - bVI - V (C - Bb - Ab - G)
-// Major chords descending = tension and release
-$: note("c4*8 bb4*8 ab4*8 g4*8")
-
-  .s("square")
-  .lpf(2200).resonance(10)
-  .gain(0.55).coarse(10).shape(0.5)
-  .ad(0.005, 0.05)`,
-  },
-  {
-    id: 'chords-modal-interchange',
-    title: 'Modal Interchange',
-    description: 'Borrowing chords from C minor but keeping them all major. Has that epic, cinematic quality — feels bigger than it is.',
-    genre: 'Electroclash',
-    tags: ['chords', 'modal', 'cinematic', 'epic', 'sophisticated'],
-    bpm: 120,
-    createdAt: '2025-01-01',
-    updatedAt: '2025-01-01',
-    source: 'chord-progressions.js',
-    featured: false,
-    code: `// Modal Interchange: I - bVI - bIII - bVII (C - Ab - Eb - Bb)
-// Borrowed from C minor, but all major chords
-$: note("c4*8 ab4*8 eb4*8 bb4*8")
-
-  .s("sawtooth")
-  .lpf(2800).resonance(7)
-  .gain(0.5).distort(0.6).coarse(6)
-  .ad(0.01, 0.08)`,
-  },
-  {
-    id: 'chords-tritone-sub',
-    title: 'Tritone Substitution',
-    description: 'That jazz trick where you swap the V for a chord a tritone away. Sounds wrong in the best way — very sci-fi.',
-    genre: 'Cyber',
-    tags: ['chords', 'tritone', 'jazz', 'dissonant', 'futuristic'],
-    bpm: 120,
-    createdAt: '2025-01-01',
-    updatedAt: '2025-01-01',
-    source: 'chord-progressions.js',
-    featured: false,
-    code: `// Tritone Substitution: I - bII - I - V (C - Db - C - G)
-// Very dissonant and futuristic
-$: note("c4*8 db4*8 c4*8 g4*8")
-
-  .s("sawtooth")
-  .lpf(2400).resonance(12)
-  .gain(0.5).coarse(12).distort(0.7)
-  .ad(0.005, 0.05)`,
-  },
-  {
-    id: 'chords-whole-tone',
-    title: 'Whole Tone Movement',
-    description: 'Chords climbing in whole steps — no home key, no resolution, just relentless brightness. Genuinely unsettling.',
-    genre: 'Cyber',
-    tags: ['chords', 'whole-tone', 'avant-garde', 'experimental', 'bright'],
-    bpm: 120,
-    createdAt: '2025-01-01',
-    updatedAt: '2025-01-01',
-    source: 'chord-progressions.js',
-    featured: false,
-    code: `// Whole Tone Movement: I - II - III - #IV (C - D - E - F#)
-// All major = very bright, no traditional resolution
-$: note("c4*8 d4*8 e4*8 fs4*8")
-
-  .s("square")
-  .lpf(2600).resonance(8)
-  .gain(0.5).coarse(8).shape(0.4)
-  .ad(0.005, 0.06)`,
-  },
-  {
-    id: 'chords-phrygian-dominant',
-    title: 'Phrygian Dominant',
-    description: 'Dark and mystical — that half-step drop at the start gives it a Middle Eastern edge. Witch house territory.',
-    genre: 'Witchpop',
-    tags: ['chords', 'phrygian', 'exotic', 'dark', 'mystical', 'witch-house'],
-    bpm: 120,
-    createdAt: '2025-01-01',
-    updatedAt: '2025-01-01',
-    source: 'chord-progressions.js',
-    featured: true,
-    code: `// Phrygian Dominant: I - bII - III - IV (C - Db - E - F)
-// Exotic, dark, mystical
-$: note("c4*8 db4*8 e4*8 f4*8")
-
-  .s("sawtooth")
-  .lpf(2200).resonance(10)
-  .gain(0.55).coarse(10).distort(0.65)
-  .ad(0.005, 0.05)`,
-  },
-  {
     id: 'theme-minimal-dark',
     title: 'Minimal Dark',
-    description: 'Stripped everything back to just kick, hat, one bass note, and noise. Hypnotic when you let it run.',
+    description: 'Minimalist composition with kick, hi-hat, bass note, and noise layer. Restraint in arrangement and dynamic depth through rhythmic precision.',
     genre: 'Electroclash',
     tags: ['theme', 'minimal', 'dark', 'hypnotic', 'techno', 'arrangement'],
     bpm: 120,
@@ -270,9 +170,109 @@ $: s("white")
   .ad(0.5, 2)`,
   },
   {
+    id: 'chords-chromatic-descent',
+    title: 'Chromatic Descent',
+    description: 'Chromatic chord descent creating harmonic tension and resolution. Tonal gravitational pull through sequential major chord movement.',
+    genre: 'Electroclash',
+    tags: ['chords', 'chromatic', 'dark', 'tension', 'square-wave'],
+    bpm: 120,
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01',
+    source: 'chord-progressions.js',
+    featured: true,
+    code: `// Chromatic Descent: I - bVII - bVI - V (C - Bb - Ab - G)
+// Major chords descending = tension and release
+$: note("c4*8 bb4*8 ab4*8 g4*8")
+
+  .s("square")
+  .lpf(2200).resonance(10)
+  .gain(0.55).coarse(10).shape(0.5)
+  .ad(0.005, 0.05)`,
+  },
+  {
+    id: 'chords-modal-interchange',
+    title: 'Modal Interchange',
+    description: 'Modal mixture applied to major key context using minor mode chords. Expanded harmonic palette with cinematic depth and scale.',
+    genre: 'Electroclash',
+    tags: ['chords', 'modal', 'cinematic', 'epic', 'sophisticated'],
+    bpm: 120,
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01',
+    source: 'chord-progressions.js',
+    featured: false,
+    code: `// Modal Interchange: I - bVI - bIII - bVII (C - Ab - Eb - Bb)
+// Borrowed from C minor, but all major chords
+$: note("c4*8 ab4*8 eb4*8 bb4*8")
+
+  .s("sawtooth")
+  .lpf(2800).resonance(7)
+  .gain(0.5).distort(0.6).coarse(6)
+  .ad(0.01, 0.08)`,
+  },
+  {
+    id: 'chords-tritone-sub',
+    title: 'Tritone Substitution',
+    description: 'Jazz tritone substitution applied to dominant chord. Unexpected harmonic context and dissonance with deliberate tonal estrangement.',
+    genre: 'Cyber',
+    tags: ['chords', 'tritone', 'jazz', 'dissonant', 'futuristic'],
+    bpm: 120,
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01',
+    source: 'chord-progressions.js',
+    featured: false,
+    code: `// Tritone Substitution: I - bII - I - V (C - Db - C - G)
+// Very dissonant and futuristic
+$: note("c4*8 db4*8 c4*8 g4*8")
+
+  .s("sawtooth")
+  .lpf(2400).resonance(12)
+  .gain(0.5).coarse(12).distort(0.7)
+  .ad(0.005, 0.05)`,
+  },
+  {
+    id: 'chords-whole-tone',
+    title: 'Whole Tone Movement',
+    description: 'Whole-step chord progression without tonal center or resolution. Sustained tension through systemic harmonic progression.',
+    genre: 'Cyber',
+    tags: ['chords', 'whole-tone', 'avant-garde', 'experimental', 'bright'],
+    bpm: 120,
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01',
+    source: 'chord-progressions.js',
+    featured: false,
+    code: `// Whole Tone Movement: I - II - III - #IV (C - D - E - F#)
+// All major = very bright, no traditional resolution
+$: note("c4*8 d4*8 e4*8 fs4*8")
+
+  .s("square")
+  .lpf(2600).resonance(8)
+  .gain(0.5).coarse(8).shape(0.4)
+  .ad(0.005, 0.06)`,
+  },
+  {
+    id: 'chords-phrygian-dominant',
+    title: 'Phrygian Dominant',
+    description: 'Minor key progression with half-step chromatic movement. Microtonal harmonic inflection suggesting non-Western tonal systems.',
+    genre: 'Witchpop',
+    tags: ['chords', 'phrygian', 'exotic', 'dark', 'mystical', 'witch-house'],
+    bpm: 120,
+    createdAt: '2025-01-01',
+    updatedAt: '2025-01-01',
+    source: 'chord-progressions.js',
+    featured: true,
+    code: `// Phrygian Dominant: I - bII - III - IV (C - Db - E - F)
+// Exotic, dark, mystical
+$: note("c4*8 db4*8 e4*8 f4*8")
+
+  .s("sawtooth")
+  .lpf(2200).resonance(10)
+  .gain(0.55).coarse(10).distort(0.65)
+  .ad(0.005, 0.05)`,
+  },
+  {
     id: 'theme-witchpop-full',
     title: 'Witchpop Full',
-    description: 'The full witchpop arrangement — dreamy Lydian chords, a floaty lead line, pads, sparkle effects. Everything I wanted this genre to sound like.',
+    description: 'Complete witchpop composition featuring Lydian modal harmony, sustaining pads, and granular synthesized textures. Full ensemble arrangement.',
     genre: 'Witchpop',
     tags: ['theme', 'witchpop', 'ethereal', 'dreamy', 'full-arrangement', 'lydian'],
     bpm: 120,
@@ -372,7 +372,7 @@ $: s("~ ~ ~ white")
   {
     id: 'theme-cyber-glitch',
     title: 'Cyber Glitch',
-    description: 'Everything randomized, everything breaking. Generative chaos — every time you run it, it sounds different.',
+    description: 'Algorithmic generative composition using randomized control functions. Unique output on each iteration through probabilistic synthesis methods.',
     genre: 'Cyber',
     tags: ['theme', 'cyber', 'glitch', 'experimental', 'chaos', 'generative', 'noise'],
     bpm: 120,
@@ -464,7 +464,7 @@ $: s("white white white white")
   {
     id: 'theme-pc-synth',
     title: 'PC Music Synth',
-    description: 'Trying to get that SOPHIE / AG Cook thing — heavy bitcrushing, plasticky chords, everything a little too loud on purpose.',
+    description: 'Digital distortion and bit-reduction applied to harmonic content. Hyper-compressed dynamics and deliberate digital artifacts.',
     genre: 'Cyber',
     tags: ['theme', 'pc-music', 'hyperpop', 'sophie', 'ag-cook', 'bitcrush'],
     bpm: null,
