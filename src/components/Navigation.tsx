@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { label: "Work", path: "/work" },
   { label: "Research", path: "/research" },
   { label: "Leadership", path: "/leadership" },
   { label: "Portfolio", path: "/portfolio" },
