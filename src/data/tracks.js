@@ -93,7 +93,7 @@ $: s("white white white white")
   },
   {
     id: 'theme-witchpop-full',
-    title: 'Darkpop full',
+    title: 'Darkpop',
     description: 'Complete witchpop composition featuring Lydian modal harmony, sustaining pads, and granular synthesized textures. Full ensemble arrangement.',
     genre: 'Witchpop',
     tags: ['theme', 'witchpop', 'ethereal', 'dreamy', 'full-arrangement', 'lydian'],
