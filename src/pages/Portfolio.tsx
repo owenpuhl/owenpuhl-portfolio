@@ -1,5 +1,4 @@
 import { useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { ExternalLink } from "lucide-react";
 
@@ -160,18 +159,6 @@ const Portfolio = () => {
                     />
                   </div>
                 </div>
-              </div>
-              <div>
-                <h3 className="font-display text-lg text-foreground">Strudel</h3>
-                <p className="font-serif text-base md:text-lg text-muted-foreground leading-relaxed mt-2">
-                  Exploring live coding electronic music. I maintain an archive of compositions created with Strudel, ranging from experimental electroclash to generative soundscapes.
-                </p>
-                <Link
-                  to="/portfolio/strudel"
-                  className="inline-block mt-4 px-4 py-2 border border-primary/50 text-primary font-serif text-sm hover:bg-primary/5 transition-colors"
-                >
-                  Browse archive →
-                </Link>
               </div>
             </div>
           </div>
